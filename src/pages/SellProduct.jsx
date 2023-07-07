@@ -13,7 +13,7 @@ function SellProduct() {
     const handleSubmit= async(e)=>{
       e.preventDefault()
       if(title.current.value.length <5 || title.current.value.length > 150){
-        alert (' title length should be greater then 20 and less then 150 character')
+        alert (' title length should be greater then 5 and less then 150 character')
         return;
       }
       if(desc.current.value.length < 20 || desc.current.value.length >5000){
