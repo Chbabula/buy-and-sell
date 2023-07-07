@@ -7,7 +7,7 @@ function Home() {
   const[searchproducts, setSearchProducts]=React.useState([]);
 
   React.useEffect(() => {
-    fetch('https://buy-and-sell-f5fe8-default-rtdb.asia-southeast1.firebasedatabase.app/item-list.json')
+    fetch('https://babulal-buy-and-sell-project-default-rtdb.asia-southeast1.firebasedatabase.app/item-list.json')
     .then(response => response.json())
     .then(data => {
       let productList = [];
@@ -15,6 +15,7 @@ function Home() {
       for (let dataItem in data) {
         productList.push({...data[dataItem], productId: dataItem})
       }
+      productList.reverse();
       setProducts(productList)
     })
   }, [])
