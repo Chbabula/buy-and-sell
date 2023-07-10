@@ -8,7 +8,7 @@ function ProductDetails() {
 
     React.useEffect(() => {
       console.log('helo')
-      fetch(`https://buy-and-sell-f5fe8-default-rtdb.asia-southeast1.firebasedatabase.app/item-list/${productId}.json`)
+      fetch(`https://babulal-buy-and-sell-project-default-rtdb.asia-southeast1.firebasedatabase.app/item-list/${productId}.json`)
       .then(response => response.json())
       .then(data => {
         console.log(data);
